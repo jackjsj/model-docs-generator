@@ -2,12 +2,13 @@
   "name": "model-docs-generator",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "type": "module",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "run": "ts-node index.ts",
-    "start": "node index.js"
+    "start": "ts-node src/index.ts"
+  },
+  "bin": {
+    "mdg": "./bin/mdg"
   },
   "keywords": [],
   "author": "",
@@ -16,10 +17,21 @@
     "@babel/core": "^7.23.6",
     "@babel/parser": "^7.23.6",
     "@babel/preset-typescript": "^7.23.3",
+    "@babel/types": "^7.23.6",
     "@types/babel__core": "^7.20.5",
+    "@types/babel__traverse": "^7.20.4",
     "@types/fs-extra": "^11.0.4",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "@typescript-eslint/parser": "^6.16.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-tsdoc": "^0.2.17",
     "fs-extra": "^11.2.0",
     "ts-node": "^10.9.2",
+    "typedoc": "^0.25.4",
     "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@babel/traverse": "^7.23.7",
+    "@microsoft/api-extractor": "^7.39.0"
   }
 }
