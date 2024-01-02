@@ -1,17 +1,16 @@
 interface IOptions {
-
+  tsConfigPath?: string;
 }
 
 interface IModel {
   name: string;
-  subModels: Record<string, ISubModel>
+  subModels: Record<string, ISubModel>;
 }
 
 interface ISubModel {
   name: string;
-  state: Record<string, IStateDesc>;
-  effects?: IEffect;
-  reducers?: IReducer;
+  state?: any;
+  effects?: any;
 }
 
 /**
